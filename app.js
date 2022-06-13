@@ -17,6 +17,15 @@ downBtn.addEventListener("click", () => {
   changeSlide("down");
 });
 
+document.addEventListener("keydown", (ev) => {
+  if (ev.key === "ArrowUp" || ev.key === "w") {
+    changeSlide("up");
+  }
+  if (ev.key === "ArrowDown" || ev.key === "s") {
+    changeSlide("down");
+  }
+});
+
 function changeSlide(direction) {
   if (direction === "up") {
     activeSlideIndex++;
